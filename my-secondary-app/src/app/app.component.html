@@ -1,0 +1,10 @@
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label class="form-label">Fruit Name</label>
+      <input type="text" class="form-control" [(ngModel)]="fruit" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button (click)="addFruit()" type="submit" class="btn btn-primary">Add</button>
+  </form>
+  <app-fruit-list [fruits]="fruits" (myEvent)="deleteItem($event)"></app-fruit-list>
+</div>
